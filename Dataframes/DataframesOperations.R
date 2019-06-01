@@ -57,4 +57,46 @@ print(mtcars[,'mpg'])
 print(mtcars['mpg'])
 
 head(mtcars[c('mpg','wt')])
+
+
+
+#bind a new row to the existing dataframe
+
+print(df)
+
+df2 <- data.frame(col.name.1 = 200 , col.name.2 = 'k')
+new.df = rbind(df,df2)
+print(new.df)
+
+#bind a new column to the existing dataframe
+
+print(df)
+
+colval <- 2*df$col.name.1
+print(colval)
+
+new.df = cbind(new.df,colval)
+print(new.df)
+
+#selecting multiple rows
+
+print(df[1:3,])
+
+#selecting everything but not the second row
+print(df[-2,])      
+
+#print the conditional data into mtcars
+
+print(mtcars[mtcars$mpg>21,])
+
+
+print(mtcars[(mtcars$mpg>21) & (mtcars$cyl>2),])
+
+
+print(mtcars[(mtcars$mpg>21) & (mtcars$cyl>2),c('qsec','vs','am')])
+
+#by using subset
+
+print(subset(mtcars,mpg>21 & cyl>2))
+
       
