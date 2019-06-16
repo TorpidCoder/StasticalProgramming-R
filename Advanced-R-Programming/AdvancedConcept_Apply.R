@@ -42,3 +42,12 @@ square_num <- function(x){
 print(vec)
 sq_result <- sapply(vec, square_num)
 print(sq_result)
+
+
+#ananymous functions
+
+vector_vals <- c(1,2,3,4,5)
+
+result4 <- sapply(vector_vals, function(num){num**3})
+
+print(result4)
