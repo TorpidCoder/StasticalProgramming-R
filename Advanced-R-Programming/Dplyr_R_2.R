@@ -22,4 +22,9 @@ distinct(select(flights,month))
 #change the column name
 
 head(mutate(flights,actualtime = dep_time-dep_delay))
+
+
+# to get the only new column
+head(transmute(flights,actualtime = dep_time-dep_delay))
+
          
