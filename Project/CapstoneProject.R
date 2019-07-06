@@ -26,3 +26,16 @@ head(head_doubles)
 #AVG=H/AB
 data$BA <- data$H / data$AB
 print(tail(data$BA))
+
+#calculate the on base percentage
+#OBP = H+BB+HBP/AB+BB+HBP+SF
+
+data$OBP <- (data$H+data$BB+data$HBP)/(data$AB+data$BB+data$HBP+data$SF)
+
+#calculate the X1B column
+#1B = H-2B-3B-HR
+
+data$X1B <- data$H - data$X2B - data$X3B - data$HR
+
+data$SLG <- ((1 * data$X1B) + (2 * data$X2B) + (3 * data$X3B) + (4 * data$HR) ) / data$AB
+print(str(data))
