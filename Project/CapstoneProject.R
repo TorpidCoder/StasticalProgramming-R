@@ -1,5 +1,6 @@
-
+library(ggplot2)
 library(dplyr)
+library(plotly)
 
 #Read the data
 data <- read.csv('/Users/sahilnagpal/Desktop/R-Programming/R-Course-HTML-Notes/R-for-Data-Science-and-Machine-Learning/Training Exercises/Capstone and Data Viz Projects/Capstone Project/Batting.csv')
@@ -69,4 +70,14 @@ print(count(lost_players))
 
 lost_players_years <- subset(lost_players,yearID==2001)
 
-print(head(lost_players_years))
+head(lost_players_years)
+
+#select selected columns 
+
+select_lost_players_years <- lost_players_years %>% select('playerID','H','X2B','X3B','HR','OBP','SLG','BA','AB')
+print(head(select_lost_players_years))
+
+#plotting the data 
+avail.players <- filter(combo,yearID==2001)
+pl1 <- ggplot(avail.players,aes(x= OBP , y = salary,fill='white',color = 'red')) + geom_point()
+print(ggplotly(pl1))
