@@ -100,3 +100,8 @@ threshold.value <- 90
 student.score <- which(course.grade>= threshold.value)
 
 students[student.score]
+
+#Named Components
+course.grade
+students
+names(course.grade) <- students
