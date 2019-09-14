@@ -104,4 +104,53 @@ students[student.score]
 #Named Components
 course.grade
 students
+final
+midterm
 names(course.grade) <- students
+names(course.grade)
+
+course.grade[c("Frank")]
+
+
+#Generating sequences
+0:10
+
+15:5
+
+seq(1,10,2)
+
+
+#Generating repeats
+#repeat 1 for 3 times
+rep(1,3)
+
+#repeat numbers from 5 to 10 for 2 times
+rep(5:10,2)
+
+#repeat numebrs from 1 to 3 for 3 and each will come 2 times
+rep(1:3,each=2,3)
+
+
+rep(1:4,c(1,2,3,4))
+
+#Random Numbers
+
+?runif
+
+#this will create one sample number in between 2 and 3.
+runif(1,2,3)
+
+#this will create 10 sample number between 7 and 9.
+runif(10,7,9)
+
+#sample number
+sample(1:19,2)
+
+
+
+#normal distrubution and Exponential distribution
+rnorm(5,mean = 100 , sd=10)
+
+?rexp()
+
+rexp(1,2)
